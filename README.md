@@ -1,2 +1,3 @@
 # CPP-Modules
-Each module covers a topic and provides tutorial examples.
+**My Ecole 42 C++ Modules.**
+**This repository contains good examples of C++ and OOP basics.**
