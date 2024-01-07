@@ -1,0 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ykarabul <ykarabul@student.42kocaeli.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/31 18:51:42 by ykarabul          #+#    #+#             */
+/*   Updated: 2023/07/31 21:39:42 by ykarabul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Brain.hpp"
+
+Brain::Brain()
+{
+    std::cout << "Brain constructor called" << std::endl;
+    for (int i = 0; i < 100; ++i) {
+        ideas[i] = "some animalistic ideas";
+    }
+}
+
+Brain::~Brain()
+{
+    std::cout << "Brain destructor called" << std::endl;
+}
+
+Brain::Brain(const Brain& copy)
+{
+    std::cout << "Brain copy constructor called" << std::endl;
+    *this = copy;
+}
+
+Brain &Brain::operator=(const Brain& copy)
+{
+    for (size_t i = 0; i < copy.ideas->size(); i++)
+    {
+        this->ideas[i] = copy.ideas[i];
+    }
+    return (*this);
+}
